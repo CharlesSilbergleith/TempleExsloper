@@ -13,9 +13,16 @@ public class Item {
 
     }
     //added constructor so dev can adjust what values for the vars
-    public Item(String name, float amount, String description ){
+    public Item(String name,  String description,float amount){
         this.name=name;
         this.healAmount = amount;
+        this.description = description;
+
+    }
+    //for random heals
+    public Item(String name, int max,int min , String description ){
+        this.name=name;
+        this.healAmount = (float)(Math.random() * ((max - min) + 1)) + min;
         this.description = description;
 
     }
@@ -24,7 +31,7 @@ public class Item {
         player.health.heal(healAmount);
     }
     //returs the name of item and the description as a string 
-    public String toString(){
+    public String getItem(){
         return (name+": "+description);
 
     }

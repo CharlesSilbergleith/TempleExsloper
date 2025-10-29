@@ -51,4 +51,8 @@ public class Health {
         return( ""+currnet);
 
     }
+    public float getHealth(){
+        return currnet;
+
+    }
 }

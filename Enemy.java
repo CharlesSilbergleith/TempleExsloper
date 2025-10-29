@@ -16,4 +16,11 @@ public class Enemy {
         player.health.takeDamage(attackPower);
 
     }
+    public float getAttack(){
+        return attackPower;
+    }
+    public String getName(){
+        return name;
+
+    }
 }
